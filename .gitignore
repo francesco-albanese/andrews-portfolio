@@ -23,10 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 
-.DS_Store
-node_modules
 coverage
 build
-.idea/
-.vscode/
 .eslintcache
