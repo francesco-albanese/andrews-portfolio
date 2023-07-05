@@ -1,10 +1,14 @@
 import { Header } from "components/Header";
 import { MainContainer } from "./styles";
+import { AppContextProvider } from "context";
 
 function App() {
-  return <MainContainer>
-		<Header></Header>
-	</MainContainer>;
+  return (
+    <AppContextProvider>
+      <Header />
+      <MainContainer></MainContainer>
+    </AppContextProvider>
+  );
 }
 
 export default App;
