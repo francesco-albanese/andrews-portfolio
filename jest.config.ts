@@ -6,8 +6,13 @@ const config: Config = {
   moduleNameMapper: {
     "\\.(css)$": "identity-obj-proxy",
   },
-	testEnvironment: "node",
-	preset: "ts-jest"
+  testEnvironment: "jsdom",
+  moduleDirectories: ["node_modules", "src"],
+  transform: {
+    "^.+\\.(ts|js|tsx|jsx)$": "@swc/jest",
+    "^(?!.*\\.(js|jsx|mjs|cjs|ts|tsx|css|json)$)":
+      "<rootDir>/fileTransform.cjs",
+  },
 };
 
 export default config;
